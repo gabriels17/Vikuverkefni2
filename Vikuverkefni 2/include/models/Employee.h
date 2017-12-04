@@ -10,13 +10,13 @@ class Employee
                     double salary, int month,
                     int year    );
 
-        string getName();
-        string getSsn();
-        double getSalary();
-        int getMonth();
-        int getYear();
+        string getName() const ;
+        string getSsn() const ;
+        double getSalary() const ;
+        int getMonth() const ;
+        int getYear() const ;
 
-        friend ostream& operator << (ostream& out, Employee& employee);
+        friend ostream& operator << (ostream& out, const Employee& employee);
 
     private:
         string _name;

@@ -13,27 +13,27 @@ Employee::Employee(   string name, string ssn,
     _year = year;
 }
 
-string Employee::getName(){
+string Employee::getName() const {
     return _name;
 }
 
-string  Employee::getSsn(){
+string  Employee::getSsn() const {
     return _ssn;
 }
 
-double Employee::getSalary(){
+double Employee::getSalary() const {
     return _salary;
 }
 
-int Employee::getMonth(){
+int Employee::getMonth() const {
     return _month;
 }
 
-int Employee::getYear(){
+int Employee::getYear() const {
     return _year;
 }
 
-ostream& operator << (ostream& out, Employee& employee){
+ostream& operator << (ostream& out, const Employee& employee){
     out << "Name: " << employee.getName() << endl;
     out << "SSN: " << employee.getSsn() << endl;
     out << "Salary: " << employee.getSalary() << endl;
