@@ -2,7 +2,12 @@
 #define EMPLOYEESERVICE_H
 
 #include "Employee.h"
+#include <string>
+#include <iostream>
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 
 class EmployeeService
@@ -10,12 +15,19 @@ class EmployeeService
     public:
         EmployeeService();
 
-        void GetSalary(string ssn);
-        void AddSalary( string ssn, int month, int year );
+        Employee* GetSalary(string ssn);
+        void AddSalary( string ssn, string name,
+                        double salary, int month,
+                         int year );
         double GetTotalSalary( string ssc, int year );
         Employee GetHigest(int year);
 
     private:
+        bool validateSsn( string ssn );
+        bool validateYear( int year );
+        bool validateMonth ( int month );
+        bool validateSalary( double salary);
+        bool validateName ( string name);
 };
 
 #endif // EMPLOYEESERVICE_H
