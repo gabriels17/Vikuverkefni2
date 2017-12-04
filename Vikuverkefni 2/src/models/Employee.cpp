@@ -3,11 +3,18 @@
 
 using namespace std;
 
-Employee::Employee(   char nafn[], char ssn[],
+Employee::Employee(   string name, string ssn,
                     double salary, int month,
                     int year    ){
+    _name = name;
+    _ssn = ssn;
+    _salary = salary;
+    _month = month;
+    _year = year;
+}
 
-
+string Employee::getName(){
+    return _name;
 }
 
 string  Employee::getSsn(){
@@ -27,6 +34,7 @@ int Employee::getYear(){
 }
 
 ostream& operator << (ostream& out, Employee& employee){
+    out << "Name: " << employee.getName() << endl;
     out << "SSN: " << employee.getSsn() << endl;
     out << "Salary: " << employee.getSalary() << endl;
     out << "Month: " << employee.getMonth() << endl;
