@@ -4,8 +4,3 @@ EmployeeRepo::EmployeeRepo()
 {
     //ctor
 }
-
-EmployeeRepo::~EmployeeRepo()
-{
-    //dtor
-}

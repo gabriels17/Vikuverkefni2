@@ -6,18 +6,21 @@ using namespace std;
 class Employee
 {
     public:
-        Employee(   char nafn[], char ssn[],
+        Employee(   string name, string ssn,
                     double salary, int month,
                     int year    );
 
+        string getName();
         string getSsn();
         double getSalary();
         int getMonth();
         int getYear();
 
+        friend ostream& operator << (ostream& out, Employee& employee);
+
     private:
-        char _name[32];
-        char _ssn[10];
+        string _name;
+        string _ssn;
         double _salary;
         int _month;
         int _year;

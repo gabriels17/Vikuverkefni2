@@ -11,7 +11,7 @@ class EmployeeRepo
         EmployeeRepo();
 
     private:
-        vector
+        vector<int> random_vector;
 };
 
 #endif // EMPLOYEEREPO_H
