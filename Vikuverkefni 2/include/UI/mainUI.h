@@ -10,6 +10,9 @@ class MainUI
     public:
         void MainMenu();
         void userInput(char input);
+        void salaryInput();
+        void salaryYearInfo();
+        void employeeHighest();
 
     private:
 };
