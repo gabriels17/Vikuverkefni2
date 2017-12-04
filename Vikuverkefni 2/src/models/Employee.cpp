@@ -7,7 +7,7 @@ Employee::Employee(   char nafn[], char ssn[],
 
 }
 
-char*  Employee::getSsn(){
+string  Employee::getSsn(){
 
 }
 double Employee::getSalary(){

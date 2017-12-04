@@ -4,8 +4,3 @@ EmployeeService::EmployeeService()
 {
     //ctor
 }
-
-EmployeeService::~EmployeeService()
-{
-    //dtor
-}

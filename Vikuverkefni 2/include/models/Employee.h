@@ -1,6 +1,6 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-
+#include <string>
 using namespace std;
 
 class Employee
@@ -10,7 +10,7 @@ class Employee
                     double salary, int month,
                     int year    );
 
-        char* getSsn();
+        string getSsn();
         double getSalary();
         int getMonth();
         int getYear();

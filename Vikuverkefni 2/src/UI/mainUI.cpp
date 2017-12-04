@@ -5,7 +5,7 @@ void MainUI::MainMenu(){
 
     while(true){
         char input;
-        cout << "Şatt er UI!" << endl;
+        cout << "This is UI" << endl;
         cin >> input;
         }
 }
