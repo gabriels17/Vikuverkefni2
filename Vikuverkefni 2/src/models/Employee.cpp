@@ -8,14 +8,17 @@ Employee::Employee(   char nafn[], char ssn[],
 }
 
 string  Employee::getSsn(){
-
+    return _ssn;
 }
+
 double Employee::getSalary(){
-
+    return _salary;
 }
+
 int Employee::getMonth(){
-
+    return _month;
 }
-int Employee::getYear(){
 
+int Employee::getYear(){
+    return _year;
 }
