@@ -1,11 +1,21 @@
 #include "Employee.h"
 
-Employee::Employee()
-{
-    //ctor
+Employee::Employee(   char nafn[], char ssn[],
+                    double salary, int month,
+                    int year    ){
+
+
 }
 
-Employee::~Employee()
-{
-    //dtor
+char*  Employee::getSsn(){
+
+}
+double Employee::getSalary(){
+
+}
+int Employee::getMonth(){
+
+}
+int Employee::getYear(){
+
 }

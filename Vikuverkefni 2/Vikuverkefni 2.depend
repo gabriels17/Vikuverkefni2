@@ -2,5 +2,25 @@
 1512393962 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\ui\mainui.cpp
 	"mainUI.h"
 
-1512393962 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\ui\mainui.h
+1512394410 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\ui\mainui.h
+	"Employee.h"
+
+1512395480 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\models\employee.h
+
+1512394406 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\main.cpp
+	<iostream>
+	"mainUI.h"
+
+1512395470 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\models\employee.cpp
+	"Employee.h"
+
+1512394391 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\repositories\employeerepo.cpp
+	"EmployeeRepo.h"
+
+1512394328 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\repositories\employeerepo.h
+
+1512394271 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\services\employeeservice.cpp
+	"EmployeeService.h"
+
+1512394271 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\services\employeeservice.h
 
