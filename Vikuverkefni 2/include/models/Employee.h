@@ -15,6 +15,8 @@ class Employee
         int getMonth();
         int getYear();
 
+        friend ostream& operator << (ostream& out, Employee& employee);
+
     private:
         char _name[32];
         char _ssn[10];
