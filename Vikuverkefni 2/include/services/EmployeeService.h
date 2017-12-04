@@ -5,20 +5,15 @@
 #include <string>
 #include <iostream>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+class EmployeeService {
 
-
-class EmployeeService
-{
     public:
         EmployeeService();
 
         Employee* GetSalary(string ssn);
         void AddSalary( string ssn, string name,
                         double salary, int month,
-                         int year );
+                        int year );
         double GetTotalSalary( string ssc, int year );
         Employee GetHigest(int year);
 
@@ -26,7 +21,7 @@ class EmployeeService
         bool validateSsn( string ssn );
         bool validateYear( int year );
         bool validateMonth ( int month );
-        bool validateSalary( double salary);
+        bool validateSalary( double salary );
         bool validateName ( string name);
 };
 

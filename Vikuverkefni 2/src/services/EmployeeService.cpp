@@ -38,7 +38,7 @@ bool EmployeeService::validateSsn( string ssn ){
 
     if(ssn.size() == 10){
         for(int i = 0; i < 10; i++){
-            if( !isdigit( (int)ssn[i] ) ){
+            if( !isdigit( ssn[i] ) ){
                 return false;
             }
         }
