@@ -1,17 +1,18 @@
 # depslib dependency file v1.0
-1512393962 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\ui\mainui.cpp
+1512395746 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\ui\mainui.cpp
 	"mainUI.h"
 
-1512394410 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\ui\mainui.h
+1512395900 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\ui\mainui.h
 	"Employee.h"
+	<iostream>
 
 1512395480 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\models\employee.h
 
-1512394406 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\main.cpp
+1512395769 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\main.cpp
 	<iostream>
-	"mainUI.h"
+	"MainUI.h"
 
-1512395470 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\models\employee.cpp
+1512395502 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\models\employee.cpp
 	"Employee.h"
 
 1512394391 source:c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\src\repositories\employeerepo.cpp

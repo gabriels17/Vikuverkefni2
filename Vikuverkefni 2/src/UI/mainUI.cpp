@@ -1,11 +1,11 @@
 #include "mainUI.h"
 
-mainUI::mainUI()
-{
-    //ctor
-}
 
-mainUI::~mainUI()
-{
-    //dtor
+void MainUI::MainMenu(){
+
+    while(true){
+        char input;
+        cout << "Þatt er UI!" << endl;
+        cin >> input;
+        }
 }
