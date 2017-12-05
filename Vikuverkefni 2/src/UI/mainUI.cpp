@@ -1,5 +1,5 @@
 #include "mainUI.h"
-#include <stdlib.h>
+
 
 void MainUI::MainMenu()
 {
@@ -21,7 +21,30 @@ void MainUI::userInput(char input)
     EmployeeService EmployeeService;
     if (input == '1')
     {
-        EmployeeService.AddSalary(salaryInput());
+        try
+        {
+            EmployeeService.AddSalary(salaryInput());
+        }
+        catch (InvalidSsnInput)
+        {
+            system("CLS");
+            cout << "Invalid SSN input" << endl;
+        }
+        catch (InvalidSalaryInput)
+        {
+            system("CLS");
+            cout << "Invalid salary input" << endl;
+        }
+        catch (InvalidMonthInput)
+        {
+            stem("CLS");
+            cout << "Invalid month input" << endl;
+        }
+        catch (InvalidYearInput)
+        {
+            stem("CLS");
+            cout << "Invalid year input" << endl;
+        }
     }
     else if (input == '2')
     {
