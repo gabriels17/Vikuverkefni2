@@ -58,7 +58,7 @@ bool EmployeeService::validateSsn( string ssn ){
 
 }
 bool EmployeeService::validateYear( int year ){
-    if(year < 1900 || year > 2017){
+    if( year == 2017 ){
         return true;
     }
     else{

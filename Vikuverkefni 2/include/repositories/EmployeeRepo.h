@@ -9,9 +9,12 @@ class EmployeeRepo
 {
     public:
         EmployeeRepo();
+        void readFromFile();
+        void writeToFile();
+
 
     private:
-        vector<int> random_vector;
+        vector<Employee> _employeesRecords;
 };
 
 #endif // EMPLOYEEREPO_H
