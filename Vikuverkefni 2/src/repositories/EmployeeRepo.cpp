@@ -29,15 +29,18 @@ void EmployeeRepo::readFromFile() {
 
 }
 
-void EmployeeRepo::writeToFile() {
-
+void EmployeeRepo::writeToFile(Employee& employee) {
+    ofstream fout;
+    fout.open("employees.txt", ios::app);
+    if (fout.is_open()) {
+        fout << employee;
+    }
+    fout.close();
 }
 vector<Employee> EmployeeRepo::returnDatabase(){
     return _employeesRecords;
 }
 void EmployeeRepo::addToDatabase( Employee emp ){
-
     _employeesRecords.push_back(emp);
-    writeToFile(); //?? vantar eitthvað
-
+   writeToFile(emp);
 }

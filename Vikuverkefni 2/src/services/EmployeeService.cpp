@@ -56,10 +56,13 @@ double EmployeeService::GetTotalSalary( string ssn, int year ){
 Employee EmployeeService::GetHigest(int year){
     if( validateYear( year )){
         vector<Employee> allEmp = repo.returnDatabase();
+        Employee highest = allEmp[0];
+        for( int i = 1; i < allEmp.size(); i++){
+                if(allEmp[i].getSalary() > highest.getSalary() ){
+                    highest = allEmp[i];
 
-
-
-
+                }
+        }
     }
 
 }
