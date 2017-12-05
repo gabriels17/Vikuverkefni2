@@ -41,11 +41,13 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/UI/mainUI.h" />
+		<Unit filename="include/exeptions/ValidadionExeptions.h" />
 		<Unit filename="include/models/Employee.h" />
 		<Unit filename="include/repositories/EmployeeRepo.h" />
 		<Unit filename="include/services/EmployeeService.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/UI/mainUI.cpp" />
+		<Unit filename="src/exeptions/ValidadionExeptions.cpp" />
 		<Unit filename="src/models/Employee.cpp" />
 		<Unit filename="src/repositories/EmployeeRepo.cpp" />
 		<Unit filename="src/services/EmployeeService.cpp" />
