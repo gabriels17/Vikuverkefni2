@@ -24,7 +24,7 @@ class EmployeeService {
         bool validateYear( int year );
         bool validateMonth ( int month );
         bool validateSalary( double salary );
-        bool validateName ( string name);
+        bool validateName ( string name );
 };
 
 #endif // EMPLOYEESERVICE_H

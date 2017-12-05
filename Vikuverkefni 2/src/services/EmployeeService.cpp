@@ -46,14 +46,14 @@ bool EmployeeService::validateSsn( string ssn ){
     if(ssn.size() == 10){
         for(int i = 0; i < 10; i++){
             if( !isdigit( ssn[i] ) ){
-                return false;
+                throw InvalidSsnInput();
             }
         }
 
         return true;
     }
     else{
-        return false;
+        throw InvalidSsnInput();
     }
 
 }
@@ -62,7 +62,7 @@ bool EmployeeService::validateYear( int year ){
         return true;
     }
     else{
-        return false;
+        throw InvalidYearInput();
     }
 
 }
@@ -70,14 +70,14 @@ bool EmployeeService::validateMonth ( int month ){
     if(month <= 12 && month >= 1){
         return true;
     }
-    return false;
+    throw InvalidMonthInput();
 }
 bool EmployeeService::validateSalary( double salary){
     if(salary > 0){
         return true;
     }
     else{
-        ;
+        throw InvalidSaleryInput();
     }
 }
 bool EmployeeService::validateName ( string name){
@@ -85,6 +85,6 @@ bool EmployeeService::validateName ( string name){
         return true;
     }
     else{
- //       throw InvalidNameInput;
+        throw InvalidNameInput();
     }
 }
