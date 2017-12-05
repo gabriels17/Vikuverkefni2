@@ -1,5 +1,5 @@
 #include "mainUI.h"
-
+#include <stdlib.h>
 
 void MainUI::MainMenu()
 {
@@ -10,6 +10,7 @@ void MainUI::MainMenu()
         cout << "1 Add salary to record" << endl;
         cout << "2 Get total salary for year" << endl;
         cout << "3 Get employee with the highest salary" << endl;
+        cout << "4 Exit the program" << endl << endl;
         cin >> input;
         userInput(input);
     }
@@ -29,6 +30,10 @@ void MainUI::userInput(char input)
     else if (input == '3')
     {
         EmployeeService.GetHigest(employeeHighest());
+    }
+    else if (input == '4')
+    {
+        exit(1);
     }
     else
     {

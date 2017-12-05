@@ -29,3 +29,44 @@
 1512396379 c:\users\stefanorn\documents\github\vikuverkefni2\vikuverkefni 2\include\services\employeeservice.h
 	"Employee.h"
 
+1512399736 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512476011 c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\include\ui\mainui.h
+	"Employee.h"
+	<iostream>
+	"EmployeeService.h"
+
+1512476009 c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\include\models\employee.h
+	<string>
+
+1512477751 c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\include\services\employeeservice.h
+	"Employee.h"
+	<string>
+	<iostream>
+	"..\exeptions\ValidadionExeptions.h"
+
+1512477171 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\src\exeptions\validadionexeptions.cpp
+	"ValidadionExeptions.h"
+
+1512400025 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\src\models\employee.cpp
+	"Employee.h"
+	<iostream>
+
+1512397751 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\src\repositories\employeerepo.cpp
+	"EmployeeRepo.h"
+
+1512397741 c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\include\repositories\employeerepo.h
+	"Employee.h"
+	<vector>
+
+1512477897 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\src\ui\mainui.cpp
+	"mainUI.h"
+	<stdlib.h>
+
+1512477171 c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\include\exeptions\validadionexeptions.h
+
+1512477171 source:c:\users\gabri\dropbox\hr\verklegt námskeið i\github\vikuverkefni2\vikuverkefni 2\src\services\employeeservice.cpp
+	"EmployeeService.h"
+
