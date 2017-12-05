@@ -8,9 +8,10 @@ void MainUI::MainMenu()
     {
         char input;
         cout << "1 Add salary to record" << endl;
-        cout << "2 Get total salary for year" << endl;
-        cout << "3 Get employee with the highest salary" << endl;
-        cout << "4 Exit the program" << endl << endl;
+        cout << "2 Get all salary records for employee on given year" << endl;
+        cout << "3 Get total salary for year" << endl;
+        cout << "4 Get employee with the highest salary" << endl;
+        cout << "5 Exit the program" << endl << endl;
         cin >> input;
         userInput(input);
     }
@@ -48,13 +49,17 @@ void MainUI::userInput(char input)
     }
     else if (input == '2')
     {
-        salaryYearInfo();
+
     }
     else if (input == '3')
     {
-        EmployeeService.GetHigest(employeeHighest());
+        salaryYearInfo();
     }
     else if (input == '4')
+    {
+        EmployeeService.GetHigest(employeeHighest());
+    }
+    else if (input == '5')
     {
         exit(1);
     }
