@@ -25,11 +25,20 @@ EmployeeRepo::EmployeeRepo(){
 
 }
 
-void EmployeeRepo::readFromFile() {
-
+void EmployeeRepo::readFromFile(Employee employee) {
+    ifstream fin;
+    fin.open("employees.txt");
+    if (fin.is_open()) {
+        fin >> employee;
+        cout << employee << endl;
+        fin.close();
+    }
+    else {
+        cout << "Unable to read from file!" << endl;
+    }
 }
 
-void EmployeeRepo::writeToFile(Employee& employee) {
+void EmployeeRepo::writeToFile(Employee employee) {
     ofstream fout;
     fout.open("employees.txt", ios::app);
     if (fout.is_open()) {

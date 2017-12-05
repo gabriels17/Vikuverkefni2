@@ -17,6 +17,7 @@ class Employee
         int getYear() const ;
 
         friend ostream& operator << (ostream& out, const Employee& employee);
+        friend istream& operator >> (istream& in, Employee& employee);
 
     private:
         string _name;

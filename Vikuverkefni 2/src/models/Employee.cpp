@@ -42,3 +42,12 @@ ostream& operator << (ostream& out, const Employee& employee){
 
     return out;
 }
+
+istream& operator >> (istream& in, Employee& employee) {
+    in >> employee._name;
+    in >> employee._ssn;
+    in >> employee._salary;
+    in >> employee._month;
+    in >> employee._year;
+    return in;
+}
