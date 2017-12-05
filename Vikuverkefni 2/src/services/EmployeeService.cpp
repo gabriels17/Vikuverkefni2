@@ -77,7 +77,7 @@ bool EmployeeService::validateSalary( double salary){
         return true;
     }
     else{
-        return false;
+        ;
     }
 }
 bool EmployeeService::validateName ( string name){
@@ -85,6 +85,6 @@ bool EmployeeService::validateName ( string name){
         return true;
     }
     else{
-        return false;
+ //       throw InvalidNameInput;
     }
 }
