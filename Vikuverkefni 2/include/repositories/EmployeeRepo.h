@@ -15,6 +15,7 @@ class EmployeeRepo
         vector<Employee> returnDatabase();
         void addToDatabase( Employee emp );
 
+        void writeToFile(Employee& employee);
 
     private:
         vector<Employee> _employeesRecords;
