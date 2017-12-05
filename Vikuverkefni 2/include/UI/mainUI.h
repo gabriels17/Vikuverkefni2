@@ -16,6 +16,7 @@ class MainUI
         Employee salaryInput();
         void salaryYearInfo();
         int employeeHighest();
+        string inputSSN();
 
     private:
 };

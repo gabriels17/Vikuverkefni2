@@ -18,7 +18,7 @@ class EmployeeService {
                         int year );
         void AddSalary( Employee e );
         double GetTotalSalary( string ssc, int year );
-        Employee GetHigest(int year);
+        Employee GetHighest(int year);
 
     private:
         bool validateSsn( string ssn );
