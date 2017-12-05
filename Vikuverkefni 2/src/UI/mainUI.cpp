@@ -17,17 +17,18 @@ void MainUI::MainMenu()
 
 void MainUI::userInput(char input)
 {
+    EmployeeService EmployeeService;
     if (input == '1')
     {
-        EmployeeService.AddSalary(salaryInput);
+        EmployeeService.AddSalary(salaryInput());
     }
     else if (input == '2')
     {
-        EmployeeService.GetTotalSalary(salaryYearInfo);
+        salaryYearInfo();
     }
     else if (input == '3')
     {
-        EmployeeService.GetHigest(employeeHighest);
+        EmployeeService.GetHigest(employeeHighest());
     }
     else
     {
@@ -35,7 +36,7 @@ void MainUI::userInput(char input)
     }
 }
 
-void MainUI::salaryInput()
+Employee MainUI::salaryInput()
 {
     string ssn;
     double salary = 0.00;
@@ -44,25 +45,31 @@ void MainUI::salaryInput()
     cin >> ssn;
     cout << "Enter salary: " << endl;
     cin >> salary;
-    cout >> "Enter month: " << endl;
+    cout << "Enter month: " << endl;
     cin >> month;
     cout << "Enter year: " << endl;
     cin >> year;
+
+    return Employee("NAFN",ssn,salary,month,year);
 }
 
 void MainUI::salaryYearInfo()
 {
+    EmployeeService EmployeeService;
     string ssn;
     int year = 0;
     cout << "Enter social security number: " << endl;
     cin >> ssn;
     cout << "Enter year: " << endl;
     cin >> year;
+
+    EmployeeService.GetTotalSalary(ssn, year);
 }
 
-void MainUI::salaryInput(employeeHighest)
+int MainUI::employeeHighest()
 {
     int year = 0;
     cout << "Enter year: " << endl;
     cin >> year;
+    return year;
 }

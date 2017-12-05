@@ -21,6 +21,9 @@ void EmployeeService::AddSalary( string ssn, string name,
 
 
 }
+void EmployeeService::AddSalary( Employee e ){
+
+}
 double EmployeeService::GetTotalSalary( string ssc, int year ){
     if(validateSsn(ssc) && validateYear(year)){
         cout << "get kallað á totalsal";

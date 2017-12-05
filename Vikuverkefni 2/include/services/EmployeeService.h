@@ -14,6 +14,7 @@ class EmployeeService {
         void AddSalary( string ssn, string name,
                         double salary, int month,
                         int year );
+        void AddSalary( Employee e );
         double GetTotalSalary( string ssc, int year );
         Employee GetHigest(int year);
 

@@ -2,6 +2,7 @@
 #define MAINUI_H
 #include "Employee.h"
 #include <iostream>
+#include "EmployeeService.h"
 
 using namespace std;
 
@@ -10,9 +11,9 @@ class MainUI
     public:
         void MainMenu();
         void userInput(char input);
-        void salaryInput();
+        Employee salaryInput();
         void salaryYearInfo();
-        void employeeHighest();
+        int employeeHighest();
 
     private:
 };
