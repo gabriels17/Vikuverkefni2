@@ -53,7 +53,7 @@ double EmployeeService::GetTotalSalary( string ssn, int year ){
 
     return total;
 }
-Employee EmployeeService::GetHigest(int year){
+string EmployeeService::GetHigest(int year){
     if( validateYear( year )){
         vector<Employee> allEmp = repo.returnDatabase();
         Employee highest = allEmp[0];
@@ -63,6 +63,7 @@ Employee EmployeeService::GetHigest(int year){
 
                 }
         }
+        return highest.getName();
     }
 
 }
@@ -98,7 +99,7 @@ bool EmployeeService::validateMonth ( int month ){
     }
     throw InvalidMonthInput();
 }
-bool EmployeeService::validateSalary( double salary){
+bool EmployeeService::validateSalary( double salary ){
     if(salary > 0){
         return true;
     }
@@ -106,7 +107,7 @@ bool EmployeeService::validateSalary( double salary){
         throw InvalidSalaryInput();
     }
 }
-bool EmployeeService::validateName ( string name){
+bool EmployeeService::validateName ( string name ){
     if(name.size() < 32){
         return true;
     }
