@@ -37,12 +37,12 @@ void MainUI::userInput(char input)
         }
         catch (InvalidMonthInput)
         {
-            system("CLS");
+            stem("CLS");
             cout << "Invalid month input" << endl;
         }
         catch (InvalidYearInput)
         {
-            system("CLS");
+            stem("CLS");
             cout << "Invalid year input" << endl;
         }
     }
