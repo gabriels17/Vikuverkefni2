@@ -34,11 +34,35 @@ int Employee::getYear() const {
 }
 
 ostream& operator << (ostream& out, const Employee& employee){
-    out << "Name: " << employee.getName() << endl;
-    out << "SSN: " << employee.getSsn() << endl;
-    out << "Salary: " << employee.getSalary() << endl;
-    out << "Month: " << employee.getMonth() << endl;
-    out << "Year: " << employee.getYear() << endl;
+    if (out == cout) {
+        out << "Name: ";
+    }
+
+    out << employee.getName() << endl;
+
+    if (out == cout) {
+        out << "SSN: ";
+    }
+
+    out << employee.getSsn() << endl;
+
+    if (out == cout) {
+        out << "Salary: ";
+    }
+
+    out << employee.getSalary() << endl;
+
+    if (out == cout) {
+        out << "Month: ";
+    }
+
+    out << employee.getMonth() << endl;
+
+    if (out == cout) {
+        out << "Year: ";
+    }
+
+    out << employee.getYear() << endl;
 
     return out;
 }
