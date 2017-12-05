@@ -1,6 +1,7 @@
 #include "EmployeeRepo.h"
 
 EmployeeRepo::EmployeeRepo(){
+
     _employeesRecords.push_back( Employee("Stebbi Cool", "0103922099", 1000, 11, 2017) );
     _employeesRecords.push_back( Employee("Stebbi Cool", "0103922099", 2000, 10, 2017) );
     _employeesRecords.push_back( Employee("Stebbi Cool", "0103922099", 3000, 9, 2017) );
@@ -29,5 +30,14 @@ void EmployeeRepo::readFromFile() {
 }
 
 void EmployeeRepo::writeToFile() {
+
+}
+vector<Employee> EmployeeRepo::returnDatabase(){
+    return _employeesRecords;
+}
+void EmployeeRepo::addToDatabase( Employee emp ){
+
+    _employeesRecords.push_back(emp);
+    writeToFile(); //?? vantar eitthvað
 
 }

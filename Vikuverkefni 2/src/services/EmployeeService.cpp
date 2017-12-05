@@ -1,14 +1,25 @@
 #include "EmployeeService.h"
 
-EmployeeService::EmployeeService()
-{
-    //ctor
+EmployeeService::EmployeeService(){
+//    repo();
 }
 
-Employee* EmployeeService::GetSalary(string ssn){
+vector<Employee> EmployeeService::GetSalary(string ssn){
     if(validateSsn(ssn)){
-        cout << "get kallað á repo";
+
+            vector<Employee> allEmp = repo.returnDatabase();
+            vector<Employee> validEmp;
+            for(int i = 0; i < allEmp.size(); i++){
+                if(allEmp[i].getSsn() == ssn ){
+                    validEmp.push_back( allEmp[i] );
+                }
+            }
+            if(validEmp.size() == 0){
+                throw InvalidSsnInput();
+            }
+            return validEmp;
     }
+    return vector<Employee>();
 }
 void EmployeeService::AddSalary( string ssn, string name,
                                  double salary, int month,
@@ -16,7 +27,7 @@ void EmployeeService::AddSalary( string ssn, string name,
     if( validateSsn(ssn) && validateName(name) &&
         validateSalary(salary) && validateMonth(month) &&
         validateYear(year) ){
-        cout << "woop woop" << endl;
+            repo.addToDatabase( Employee( name, ssn, salary, month, year ) );
        }
 }
 void EmployeeService::AddSalary( Employee e ){
@@ -24,22 +35,34 @@ void EmployeeService::AddSalary( Employee e ){
     if( validateSsn( e.getSsn() ) && validateName(e.getName()) &&
         validateSalary(e.getSalary()) && validateMonth(e.getMonth()) &&
         validateYear(e.getYear()) ){
-        cout << "woop woop" << endl;
+            repo.addToDatabase(e);
        }
 
 }
-double EmployeeService::GetTotalSalary( string ssc, int year ){
-    if(validateSsn(ssc) && validateYear(year)){
-        cout << "get kallað á totalsal";
+double EmployeeService::GetTotalSalary( string ssn, int year ){
+    double total = 0;
+    if(validateSsn(ssn) && validateYear(year)){
+        vector<Employee> allEmp = repo.returnDatabase();
+
+        for(int i = 0; i < allEmp.size(); i++){
+            if(allEmp[i].getSsn() == ssn && allEmp[i].getYear()){
+                    total += allEmp[i].getSalary();
+            }
+        }
     }
+
+    return total;
 }
 Employee EmployeeService::GetHigest(int year){
     if( validateYear( year )){
-        cout << " get kallað á get highist " << endl;
+        vector<Employee> allEmp = repo.returnDatabase();
+
+
+
+
     }
 
 }
-
 
 bool EmployeeService::validateSsn( string ssn ){
 

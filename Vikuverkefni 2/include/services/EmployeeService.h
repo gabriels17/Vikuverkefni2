@@ -3,6 +3,7 @@
 
 #include "Employee.h"
 #include "ValidationException.h"
+#include "EmployeeRepo.h"
 #include <string>
 #include <iostream>
 
@@ -11,7 +12,7 @@ class EmployeeService {
     public:
         EmployeeService();
 
-        Employee* GetSalary(string ssn);
+        vector<Employee> GetSalary(string ssn);
         void AddSalary( string ssn, string name,
                         double salary, int month,
                         int year );
@@ -25,6 +26,8 @@ class EmployeeService {
         bool validateMonth ( int month );
         bool validateSalary( double salary );
         bool validateName ( string name );
+
+        EmployeeRepo repo;
 };
 
 #endif // EMPLOYEESERVICE_H
