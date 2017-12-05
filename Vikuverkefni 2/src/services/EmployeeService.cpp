@@ -6,18 +6,17 @@ EmployeeService::EmployeeService(){
 
 vector<Employee> EmployeeService::GetSalary(string ssn){
     if(validateSsn(ssn)){
-
             vector<Employee> allEmp = repo.returnDatabase();
-            vector<Employee> validEmp;
+            vector<Employee> chosenEmp;
             for(int i = 0; i < allEmp.size(); i++){
                 if(allEmp[i].getSsn() == ssn ){
-                    validEmp.push_back( allEmp[i] );
+                    chosenEmp.push_back( allEmp[i] );
                 }
             }
-            if(validEmp.size() == 0){
+            if(chosenEmp.size() == 0){
                 throw InvalidSsnInput();
             }
-            return validEmp;
+            return chosenEmp;
     }
     return vector<Employee>();
 }
@@ -45,7 +44,8 @@ double EmployeeService::GetTotalSalary( string ssn, int year ){
         vector<Employee> allEmp = repo.returnDatabase();
 
         for(int i = 0; i < allEmp.size(); i++){
-            if(allEmp[i].getSsn() == ssn && allEmp[i].getYear()){
+            if(  allEmp[i].getSsn() == ssn &&
+                 allEmp[i].getYear() == year ){
                     total += allEmp[i].getSalary();
             }
         }
