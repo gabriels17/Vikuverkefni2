@@ -18,10 +18,14 @@ void EmployeeService::AddSalary( string ssn, string name,
         validateYear(year) ){
         cout << "woop woop" << endl;
        }
-
-
 }
 void EmployeeService::AddSalary( Employee e ){
+
+    if( validateSsn( e.getSsn() ) && validateName(e.getName()) &&
+        validateSalary(e.getSalary()) && validateMonth(e.getMonth()) &&
+        validateYear(e.getYear()) ){
+        cout << "woop woop" << endl;
+       }
 
 }
 double EmployeeService::GetTotalSalary( string ssc, int year ){
