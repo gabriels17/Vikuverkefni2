@@ -49,15 +49,44 @@ void MainUI::userInput(char input)
     }
     else if (input == '2')
     {
-
+        try
+        {
+            EmployeeService.GetSalary(inputSSN());
+        }
+        catch (InvalidSsnInput)
+        {
+            system("CLS");
+            cout << "Invalid SSN input" << endl;
+        }
     }
     else if (input == '3')
     {
-        salaryYearInfo();
+        try
+        {
+            salaryYearInfo();
+        }
+        catch (InvalidSsnInput)
+        {
+            system("CLS");
+            cout << "Invalid SSN input" << endl;
+        }
+         catch (InvalidYearInput)
+        {
+            system("CLS");
+            cout << "Invalid year input" << endl;
+        }
     }
     else if (input == '4')
     {
-        EmployeeService.GetHigest(employeeHighest());
+        try
+        {
+            EmployeeService.GetHighest(employeeHighest());
+        }
+         catch (InvalidYearInput)
+        {
+            system("CLS");
+            cout << "Invalid year input" << endl;
+        }
     }
     else if (input == '5')
     {
@@ -105,4 +134,12 @@ int MainUI::employeeHighest()
     cout << "Enter year: " << endl;
     cin >> year;
     return year;
+}
+
+string MainUI::inputSSN()
+{
+    string ssn;
+    cout << "Enter social security number: " << endl;
+    cin >> ssn;
+    return ssn;
 }

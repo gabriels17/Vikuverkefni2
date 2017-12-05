@@ -1,0 +1,5 @@
+Name: NAFN
+SSN: 1000000000
+Salary: 100000
+Month: 1
+Year: 2017
