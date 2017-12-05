@@ -28,6 +28,13 @@ void EmployeeRepo::readFromFile() {
 
 }
 
-void EmployeeRepo::writeToFile() {
-
+void EmployeeRepo::writeToFile(Employee& employee) {
+    ofstream fout;
+    fout.open("employees.txt", ios::app);
+    if (fout.is_open()) {
+        fout << employee;
+    }
+    fout.close();
 }
+
+

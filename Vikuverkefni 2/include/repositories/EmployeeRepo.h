@@ -3,6 +3,7 @@
 
 #include "Employee.h"
 #include <vector>
+
 using namespace std;
 
 class EmployeeRepo
@@ -10,8 +11,7 @@ class EmployeeRepo
     public:
         EmployeeRepo();
         void readFromFile();
-        void writeToFile();
-
+        void writeToFile(Employee& employee);
 
     private:
         vector<Employee> _employeesRecords;
