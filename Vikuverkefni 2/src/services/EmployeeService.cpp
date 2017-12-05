@@ -103,7 +103,7 @@ bool EmployeeService::validateSalary( double salary){
         return true;
     }
     else{
-        throw InvalidSaleryInput();
+        throw InvalidSalaryInput();
     }
 }
 bool EmployeeService::validateName ( string name){

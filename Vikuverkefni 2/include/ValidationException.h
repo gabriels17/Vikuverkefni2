@@ -3,7 +3,7 @@
 
 
 class InvalidNameInput { };
-class InvalidSaleryInput { };
+class InvalidSalaryInput { };
 class InvalidMonthInput { };
 class InvalidYearInput { };
 class InvalidSsnInput { };
