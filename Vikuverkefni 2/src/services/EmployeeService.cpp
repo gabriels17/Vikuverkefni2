@@ -8,7 +8,7 @@ vector<Employee> EmployeeService::GetSalary(string ssn){
     if(validateSsn(ssn)){
             vector<Employee> allEmp = repo.returnDatabase();
             vector<Employee> chosenEmp;
-            for(int i = 0; i < allEmp.size(); i++){
+            for(unsigned int i = 0; i < allEmp.size(); i++){
                 if(allEmp[i].getSsn() == ssn ){
                     chosenEmp.push_back( allEmp[i] );
                 }
@@ -43,7 +43,7 @@ double EmployeeService::GetTotalSalary( string ssn, int year ){
     if(validateSsn(ssn) && validateYear(year)){
         vector<Employee> allEmp = repo.returnDatabase();
 
-        for(int i = 0; i < allEmp.size(); i++){
+        for(unsigned int i = 0; i < allEmp.size(); i++){
             if(  allEmp[i].getSsn() == ssn &&
                  allEmp[i].getYear() == year ){
                     total += allEmp[i].getSalary();
@@ -57,14 +57,14 @@ Employee EmployeeService::GetHighest(int year){
     if( validateYear( year )){
         vector<Employee> allEmp = repo.returnDatabase();
         Employee highest = allEmp[0];
-        for( int i = 1; i < allEmp.size(); i++){
-                if(allEmp[i].getSalary() > highest.getSalary() ){
-                    highest = allEmp[i];
-
-                }
+        for(unsigned int i = 1; i < allEmp.size(); i++){
+            if(allEmp[i].getSalary() > highest.getSalary() ){
+                highest = allEmp[i];
+            }
         }
+        return highest;
     }
-
+    return Employee();
 }
 
 bool EmployeeService::validateSsn( string ssn ){
