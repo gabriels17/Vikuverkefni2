@@ -73,10 +73,11 @@ ostream& operator << (ostream& out, const Employee& employee){
 }
 
 istream& operator >> (istream& in, Employee& employee) {
-    in >> employee._name;
+    getline(in, employee._name);
     in >> employee._ssn;
     in >> employee._salary;
     in >> employee._month;
     in >> employee._year;
+    in.ignore();
     return in;
 }

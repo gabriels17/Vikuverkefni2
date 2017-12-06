@@ -18,6 +18,7 @@
 					<Add directory="include/services" />
 					<Add directory="include/repositories" />
 					<Add directory="include" />
+					<Add directory="include/exceptions" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -43,7 +44,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/UI/mainUI.h" />
-		<Unit filename="include/ValidationException.h" />
+		<Unit filename="include/exceptions/ValidationException.h" />
 		<Unit filename="include/models/Employee.h" />
 		<Unit filename="include/repositories/EmployeeRepo.h" />
 		<Unit filename="include/services/EmployeeService.h" />

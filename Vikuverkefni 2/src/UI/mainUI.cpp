@@ -1,6 +1,5 @@
 #include "mainUI.h"
 
-
 void MainUI::MainMenu()
 {
 
@@ -52,7 +51,7 @@ void MainUI::userInput(char input)
         {
             vector<Employee> emp = EmployeeService.GetSalary(inputSSN());
             for( unsigned int i = 0; i < emp.size(); i++){
-                cout << emp[i];
+                cout << emp[i] << endl;
             }
         }
         catch (InvalidSsnInput)

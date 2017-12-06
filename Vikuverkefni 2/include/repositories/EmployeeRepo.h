@@ -12,14 +12,15 @@ class EmployeeRepo
 {
     public:
         EmployeeRepo();
-        void readFromFile(Employee employee);
+        void readFromFile();
         void writeToFile(Employee employee);
+        void overwriteFile(vector<Employee> emp);
         vector<Employee> returnDatabase();
         void addToDatabase(Employee emp);
         friend istream& operator >> (istream& in, Employee emp);
 
     private:
-        vector<Employee> _employeesRecords;
+        vector<Employee> _employeeRecords;
 };
 
 #endif // EMPLOYEEREPO_H
