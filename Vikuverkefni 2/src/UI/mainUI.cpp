@@ -50,7 +50,10 @@ void MainUI::userInput(char input)
     {
         try
         {
-            EmployeeService.GetSalary(inputSSN());
+            vector<Employee> emp = EmployeeService.GetSalary(inputSSN());
+            for( unsigned int i = 0; i < emp.size(); i++){
+                cout << emp[i];
+            }
         }
         catch (InvalidSsnInput)
         {
@@ -150,7 +153,7 @@ void MainUI::salaryYearInfo()
         cin.ignore();
     }
 
-    EmployeeService.GetTotalSalary(ssn, year);
+    cout << "The total salary for " << ssn << " in the year " << year << " is " <<EmployeeService.GetTotalSalary(ssn, year) << endl;
 }
 
 int MainUI::employeeHighest()
