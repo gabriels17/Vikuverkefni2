@@ -6,6 +6,7 @@ using namespace std;
 class Employee
 {
     public:
+        Employee();
         Employee(   string name, string ssn,
                     double salary, int month,
                     int year    );

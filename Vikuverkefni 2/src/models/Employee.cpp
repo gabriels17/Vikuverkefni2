@@ -3,6 +3,11 @@
 
 using namespace std;
 
+Employee::Employee()
+{
+
+}
+
 Employee::Employee(   string name, string ssn,
                     double salary, int month,
                     int year    ){
