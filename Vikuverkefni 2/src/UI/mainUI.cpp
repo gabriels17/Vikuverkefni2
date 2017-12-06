@@ -100,19 +100,37 @@ void MainUI::userInput(char input)
 
 Employee MainUI::salaryInput()
 {
-    string ssn;
+    string ssn, name;
     double salary = 0.00;
     int month = 0, year = 0;
+    cout << "Enter Name: " << endl;
+    cin.ignore();
+    getline(cin, name,'\n');
     cout << "Enter social security number: " << endl;
     cin >> ssn;
     cout << "Enter salary: " << endl;
     cin >> salary;
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore();
+        salary = -1;
+    }
     cout << "Enter month: " << endl;
     cin >> month;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore();
+            month = -1;
+    }
     cout << "Enter year: " << endl;
     cin >> year;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore();
+            year = -1;
+    }
 
-    return Employee("NAFN",ssn,salary,month,year);
+    return Employee( name,ssn,salary,month,year );
 }
 
 void MainUI::salaryYearInfo()
@@ -122,8 +140,16 @@ void MainUI::salaryYearInfo()
     int year = 0;
     cout << "Enter social security number: " << endl;
     cin >> ssn;
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore();
+    }
     cout << "Enter year: " << endl;
     cin >> year;
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore();
+    }
 
     EmployeeService.GetTotalSalary(ssn, year);
 }
@@ -132,6 +158,10 @@ int MainUI::employeeHighest()
 {
     int year = 0;
     cout << "Enter year: " << endl;
+    if(cin.fail()){
+        cin.clear();
+        cin.ignore();
+    }
     cin >> year;
     return year;
 }
