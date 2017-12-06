@@ -20,20 +20,22 @@ vector<Employee> EmployeeService::GetSalary(string ssn){
     }
     return vector<Employee>();
 }
-void EmployeeService::AddSalary( string ssn, string name,
-                                 double salary, int month,
-                                 int year ){
-    if( validateSsn(ssn) && validateName(name) &&
-        validateSalary(salary) && validateMonth(month) &&
-        validateYear(year) ){
-            repo.addToDatabase( Employee( name, ssn, salary, month, year ) );
-       }
-}
 void EmployeeService::AddSalary( Employee e ){
 
     if( validateSsn( e.getSsn() ) && validateName(e.getName()) &&
         validateSalary(e.getSalary()) && validateMonth(e.getMonth()) &&
         validateYear(e.getYear()) ){
+
+            vector<Employee> allEmp = repo.returnDatabase();
+            for( int i = 0; i < allEmp.size(); i++){
+                if( e.getMonth() == allEmp[i].getMonth() &&
+                    e.getYear() == allEmp[i].getYear() ){
+                        allEmp[i] = e;
+                        //repo.uppdateDadabase( allEmp );
+                        break;
+                }
+            }
+
             repo.addToDatabase(e);
        }
 
