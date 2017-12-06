@@ -19,7 +19,6 @@ void MainUI::MainMenu()
 
 void MainUI::userInput(char input)
 {
-    EmployeeService EmployeeService;
     if (input == '1')
     {
         try
@@ -80,7 +79,8 @@ void MainUI::userInput(char input)
     {
         try
         {
-            EmployeeService.GetHighest(employeeHighest());
+            Employee e = EmployeeService.GetHighest(employeeHighest());
+            cout << e;
         }
          catch (InvalidYearInput)
         {
@@ -135,7 +135,6 @@ Employee MainUI::salaryInput()
 
 void MainUI::salaryYearInfo()
 {
-    EmployeeService EmployeeService;
     string ssn;
     int year = 0;
     cout << "Enter social security number: " << endl;

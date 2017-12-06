@@ -19,6 +19,7 @@ class MainUI
         string inputSSN();
 
     private:
+        EmployeeService EmployeeService;
 };
 
 

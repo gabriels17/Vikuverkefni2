@@ -38,31 +38,31 @@ ostream& operator << (ostream& out, const Employee& employee){
         out << "Name: ";
     }
 
-    out << employee.getName() << endl;
+    out << employee._name << endl;
 
     if (out == cout) {
         out << "SSN: ";
     }
 
-    out << employee.getSsn() << endl;
+    out << employee._ssn << endl;
 
     if (out == cout) {
         out << "Salary: ";
     }
 
-    out << employee.getSalary() << endl;
+    out << employee._salary << endl;
 
     if (out == cout) {
         out << "Month: ";
     }
 
-    out << employee.getMonth() << endl;
+    out << employee._month << endl;
 
     if (out == cout) {
         out << "Year: ";
     }
 
-    out << employee.getYear() << endl;
+    out << employee._year << endl;
 
     return out;
 }
